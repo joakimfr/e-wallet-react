@@ -1,0 +1,23 @@
+.header {
+  height: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+    margin: auto;
+    width: 250px;
+  }
+
+  &__text {
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+  }
+}
