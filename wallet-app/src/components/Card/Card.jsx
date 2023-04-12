@@ -5,18 +5,18 @@ import bitCoin from '../../assets/vendor-bitcoin.svg'
 function Card() {
   return (
   <section className="card">
-    <article className='card__images'>
+    <article className='card__box'>
       <img className='card__chip' src={chipDark} alt="" />
       <img className='card__vendor' src={bitCoin} alt="" />
     </article>
-    <p>XXXX XXXX XXXX XXXX</p>
-    <article>
-      <p>CARDHOLDER NAME</p>
-      <p>VALID THRU</p>
+    <p className='card__number'>XXXX XXXX XXXX XXXX</p>
+    <article className='card__box'>
+      <p className='card__titles'>CARDHOLDER NAME</p>
+      <p className='card__titles'>VALID THRU</p>
     </article>
-    <article>
-      <p>FIRSTNAME LASTNAME</p>
-      <p>MM/YY</p>
+    <article className='card__box'>
+      <p className='card__info'>FIRSTNAME LASTNAME</p>
+      <p className='card__info'>MM/YY</p>
     </article>
   </section>
   )
