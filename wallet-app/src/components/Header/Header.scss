@@ -1,3 +1,6 @@
+@import '../../scss/_variables.scss';
+
+
 .header {
   height: 135px;
   display: flex;
@@ -6,7 +9,7 @@
   justify-content: center;
 
   &__title {
-    font-family: 'Source Sans Pro';
+    font-family: $sourceSans;
     font-weight: 700;
     font-size: 35px;
     text-align: center;
@@ -15,7 +18,7 @@
   }
 
   &__text {
-    font-family: 'Source Sans Pro';
+    font-family: $sourceSans;
     font-weight: 600;
     font-size: 12px;
     text-align: center;

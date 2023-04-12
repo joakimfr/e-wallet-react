@@ -1,16 +1,37 @@
-
+@import '../../scss/_variables.scss';
 
 .form {
-  width: 380px;
-  height: 240px;
+ max-width: 380px;
+  
   display: flex;
   flex-direction: column;
 
+  &__label {
+    font-family: $PTmono;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    height: 55px;
+    border-radius: 8px;
+    font-family: $PTmono;
+    
+    
+  }
+
   &__dobule {
-    display: flex;
+   display: flex;
+   flex: 1;
+    
   }                 
 
 }
+
+
+
+
+
 
 .option {
   display: flex;

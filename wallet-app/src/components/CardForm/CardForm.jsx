@@ -39,21 +39,22 @@ function CardForm() {
   
   return(
     <form className='form' action="">
-      <label htmlFor="card number">card number</label>
-      <input type="text" />
-      <label htmlFor="cardholder name">cardholder name</label>
-      <input type="text" />
+      <label className='form__label' htmlFor="card number">card number</label>
+      <input className='form__input' type="text" />
+      <label className='form__label' htmlFor="cardholder name">cardholder name</label>
+      <input className='form__input' type="text" />
       <article className='form__dobule'>
-        <label htmlFor="">valid thru 
-          <input type="text" />
+        <label className='form__label' htmlFor="">valid thru 
+          <input className='form__input' type="text" />
         </label>
-        <label htmlFor="ccv">ccv
-          <input type="text" />
+        <label className='form__label' htmlFor="ccv">ccv
+          <input className='form__input' type="text" />
         </label>
         
       </article>
-      <label htmlFor="vendor">vendor</label>
-      <Select  
+      <label className='form__label' htmlFor="vendor">vendor</label>
+      <Select 
+        classNamePrefix="select"
         options={ optionVendors }
         isSearchable={ false }
         onChange={setVendor}
