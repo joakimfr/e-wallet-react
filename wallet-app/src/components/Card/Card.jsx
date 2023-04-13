@@ -4,13 +4,17 @@ import bitCoin from '../../assets/vendor-bitcoin.svg'
 
 function Card(props) {
 
-
-
   const { cardNumber } = props;
+  const { cardName } = props;
+  const { valid } = props;
+  const { vendorImage } = props;
+  console.log(vendorImage)
 
   const displayedCardNumber = cardNumber
     ? cardNumber.padEnd(16, 'X').match(/.{1,4}/g).join(' ')
     : 'XXXX XXXX XXXX XXXX';
+
+
 
   return (
 
@@ -18,7 +22,10 @@ function Card(props) {
   <section className="card">
     <article className='card__box'>
       <img className='card__chip' src={chipDark} alt="" />
-      <img className='card__vendor' src={bitCoin} alt="" />
+      { vendorImage? 
+      <img className='card__vendor' src={vendorImage} alt="" />
+      : <img className='card__vendor' src={bitCoin} alt="" />
+      }
     </article>
     <p className='card__number'>{displayedCardNumber}</p>
     <article className='card__box'>
@@ -26,7 +33,10 @@ function Card(props) {
       <p className='card__titles'>VALID THRU</p>
     </article>
     <article className='card__box'>
-      <p className='card__info'>FIRSTNAME LASTNAME</p>
+      { cardName?
+      <p className='card__info'>{cardName}</p>
+      : <p className='card__info'>FIRSTNAME LASTNAME</p>
+      }
       <p className='card__info'>MM/YY</p>
     </article>
   </section>
