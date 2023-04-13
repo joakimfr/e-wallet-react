@@ -1,10 +1,10 @@
 @import '../../scss/_variables.scss';
 
 .form {
- max-width: 380px;
-  
+  max-width: 380px;
   display: flex;
   flex-direction: column;
+  
 
   &__label {
     font-family: $PTmono;
@@ -16,15 +16,26 @@
     height: 55px;
     border-radius: 8px;
     font-family: $PTmono;
-    
-    
+    border: 1px solid rgba(0, 0, 0, 0.8);
   }
 
   &__dobule {
    display: flex;
-   flex: 1;
-    
-  }                 
+   
+  } 
+  
+  &__button {
+    padding: 1.2rem 0rem 1.2rem;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: $PTmono;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 48px;
+  }
 
 }
 
