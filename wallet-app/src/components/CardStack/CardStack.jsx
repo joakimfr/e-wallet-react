@@ -7,13 +7,16 @@ function CardStack() {
 const cards = useSelector((state) => { return state.cards });
 
 const cardsInStore = cards.map((item) => {
-  return <p key={item.}>item.cardNumber</p>
+  return <div key={item.cardNumber}>
+    <p></p>
+  </div>
+ 
 })
 
   return (
     <div>
     <Card />
-    {cardsInStore}
+   {cardsInStore}
     </div>
   )
 }
