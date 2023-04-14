@@ -8,7 +8,7 @@ function Card(props) {
   const { cardName } = props;
   const { valid } = props;
   const { vendorImage } = props;
-  console.log(vendorImage)
+ // console.log(vendorImage)
 
   const displayedCardNumber = cardNumber
     ? cardNumber.padEnd(16, 'X').match(/.{1,4}/g).join(' ')

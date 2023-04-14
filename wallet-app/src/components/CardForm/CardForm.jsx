@@ -45,9 +45,19 @@ function CardForm() {
   
   };
 
-  function handeclick () {
-    dispatch(addCard('hej'));
-    //navigate(`/`)
+  function handeclick (event) {
+    event.preventDefault();
+
+    const formData = {
+      cardNumber: cardNumber,
+      cardName: cardName,
+      valid: valid,
+      verification: verification,
+      vendor: vendor
+    };
+
+    dispatch(addCard(formData));
+    navigate(`/`)
    }
 
   const options = [
