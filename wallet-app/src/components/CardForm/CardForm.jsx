@@ -2,6 +2,8 @@ import './CardForm.scss'
 import Card from '../Card/Card';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addCard } from '../../actions/cardAction';
 import Select from 'react-select';
 import bitCoin from '../../assets/vendor-bitcoin.svg'
 import ninjaBank from '../../assets/vendor-ninja.svg'
@@ -9,7 +11,7 @@ import blockChain from '../../assets/vendor-blockchain.svg'
 import evilCorp from '../../assets/vendor-evil.svg'
 
 function CardForm() {
-
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   
 
@@ -44,7 +46,8 @@ function CardForm() {
   };
 
   function handeclick () {
-    navigate(`/`)
+    dispatch(addCard('hej'));
+    //navigate(`/`)
    }
 
   const options = [

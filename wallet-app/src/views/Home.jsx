@@ -1,5 +1,6 @@
 import Header from "../components/Header/Header";
 import Card from "../components/Card/Card";
+import CardStack from "../components/CardStack/CardStack";
 import { useNavigate } from "react-router-dom";
 function Home() {
 
@@ -14,6 +15,7 @@ function Home() {
       <Header title='E-WALLET' text='ACTIVE CARD' />
       <h1>Home</h1>
       <Card />
+      <CardStack />
       <button onClick={handeclick}>add a new card</button>
     </div>
   )
