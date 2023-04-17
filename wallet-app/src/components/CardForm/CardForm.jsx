@@ -53,7 +53,8 @@ function CardForm() {
       cardName: cardName,
       valid: valid,
       verification: verification,
-      vendor: vendor
+      vendor: vendor.image,
+      color: vendor.color
     };
 
     dispatch(addCard(formData));
@@ -77,7 +78,8 @@ function CardForm() {
         </article>
       </div>
     ),
-    image: option.image //behövs för att kunna skicka med image till handleVendor funktionen
+    image: option.image, //behövs för att kunna skicka med image till handleVendor funktionen
+    color: option.color
   }));
 
  

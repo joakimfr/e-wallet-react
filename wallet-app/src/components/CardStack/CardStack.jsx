@@ -6,16 +6,22 @@ function CardStack() {
   
 const cards = useSelector((state) => { return state.cards });
 
-const cardsInStore = cards.map((item) => {
-  return <div key={item.cardNumber}>
-    <p></p>
-  </div>
- 
-})
+const cardsInStore = cards.map(item => (
+  <Card
+    key={item.cardNumber} // Use a unique key for each card
+    cardNumber={item.cardNumber} // Pass cardNumber as a prop to Card component
+    cardName={item.cardName} // Pass cardName as a prop to Card component
+    valid={item.valid} // Pass valid as a prop to Card component
+    vendorImage={item.vendor} // Pass vendorImage as a prop to Card component
+   
+  />
+  
+));
+console.log(cards)
 
   return (
     <div>
-    <Card />
+  
    {cardsInStore}
     </div>
   )
