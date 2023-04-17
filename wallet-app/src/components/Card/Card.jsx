@@ -1,8 +1,9 @@
 import './Card.scss'
 import chipDark from '../../assets/chip-dark.svg'
 import bitCoin from '../../assets/vendor-bitcoin.svg'
+import chipLight from '../../assets/chip-light.svg'
 
-function Card({ cardNumber = '', cardName = '', valid = '', vendorImage = bitCoin }) {
+function Card({ cardNumber = '', cardName = '', valid = '', vendorImage = bitCoin, vendorColor}) {
 
  // const { cardNumber } = props;
  // const { cardName } = props;
@@ -19,7 +20,7 @@ function Card({ cardNumber = '', cardName = '', valid = '', vendorImage = bitCoi
   return (
 
 
-  <section className="card">
+  <section className="card" style={{ background: vendorColor }}>
     <article className='card__box'>
       <img className='card__chip' src={chipDark} alt="" />
      
