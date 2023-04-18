@@ -82,7 +82,7 @@ function CardForm() {
  
   
   return(
-  <section>
+  <section className='cardform'>
     <Card cardNumber={cardNumber} cardName={cardName} valid={valid} vendorImage={vendor.image} vendorColor={vendor.color}  />
     <form className='form' action="">
       <label className='form__label' htmlFor="card number">card number</label>

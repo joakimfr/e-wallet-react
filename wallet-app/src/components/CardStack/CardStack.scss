@@ -1,23 +1,26 @@
+
+
 .card-stacked {
  
 }
 
-.card-stacked > .card {
+.card-stacked > .card-stacked__card {
   margin-top: 160px;
   transform: translateY(-50%);
   z-index: 1;
   transition: .3s ease-out;
 }
 
-.card-stacked > .card + .card {
+.card-stacked > .card-stacked__card + .card-stacked__card {
   margin-top: -180px;
   transform: translateY(-50%);
   z-index: 0;
 }
 
-.card-stacked > .card:not(:last-child):hover { 
+.card-stacked > .card-stacked__card:not(:last-child):hover { 
   cursor: pointer;
   transform: translateY(-90%);
+  
   transition: .3s ease-out;
 }
 

@@ -2,25 +2,28 @@ import './CardStack.scss'
 import Card from '../Card/Card';
 import { useSelector } from 'react-redux';
 
-function CardStack() {
+function CardStack({ onCardClick }) {
   
 const cards = useSelector((state) => { return state.cards });
 
-
+function handleCardClick(cardNumber) {
+  onCardClick(cardNumber)
+}
 
 const cardsInStore = cards.map((item) => (
   
-  <Card
-    key={item.cardNumber} // Use a unique key for each card
-    cardNumber={item.cardNumber} // Pass cardNumber as a prop to Card component
-    cardName={item.cardName} // Pass cardName as a prop to Card component
-    valid={item.valid} // Pass valid as a prop to Card component
-    vendorImage={item.vendor} // Pass vendorImage as a prop to Card component
-    vendorColor={item.color}
-    
-  />
- 
-));
+  <div className='card-stacked__card' onClick={() => handleCardClick(item.cardNumber)} key={item.cardNumber} >
+    <Card
+      key={item.cardNumber} // props som skickas till min card component
+      cardNumber={item.cardNumber} 
+      cardName={item.cardName} 
+      valid={item.valid}
+      vendorImage={item.vendor} 
+      vendorColor={item.color}
+    />
+  </div>
+)
+);
 console.log(cards)
 
   return (

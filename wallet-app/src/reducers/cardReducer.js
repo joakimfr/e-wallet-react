@@ -1,5 +1,6 @@
 const initialState = { // Vad vår Redux store ska innehålla
-  cards: []
+  cards: [],
+  selectedCard: null
 }
 
 const reducer = (state = initialState, action) => {
@@ -9,7 +10,13 @@ const reducer = (state = initialState, action) => {
           return {
               ...state,
               cards: [...state.cards, action.payload]
-          }
+          };
+      case 'SELECTED_CARD':
+        const matchingCard = state.cards.find((card) => card.cardNumber === action.payload)
+        return {
+          ...state,
+          selectedCard: matchingCard
+        }
   
       default:
           return state;

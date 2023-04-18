@@ -6,7 +6,6 @@ function AddCard() {
   return (
     <div>
       <Header title='ADD A NEW BANK CARD' text='NEW CARD' />
-    
       <CardForm />
     </div>
   )
