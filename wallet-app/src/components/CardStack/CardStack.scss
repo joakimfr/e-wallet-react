@@ -1,3 +1,16 @@
 .card-stacked {
+ 
+}
 
+.card-stacked > .card {
+
+  transform: translateY(-50%);
+  z-index: 1;
+  
+}
+
+.card-stacked > .card + .card {
+  margin-top: -180px;
+  transform: translateY(-50%);
+  z-index: 0;
 }

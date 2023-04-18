@@ -26,7 +26,8 @@ function handleCardClick (cardNumber) {
       
       <CardStack onCardClick={handleCardClick} />
      
-      <button onClick={handeclick}>add a new card</button>
+      <button className='button' onClick={handeclick}>add a new card</button>
+    
     </div>
   )
 }
