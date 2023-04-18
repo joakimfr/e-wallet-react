@@ -30,7 +30,6 @@ function CardForm() {
     setCardName(e.target.value);
   }
 
-
   const handleValid = (e) => {
     setValid(e.target.value);
   }
@@ -40,9 +39,7 @@ function CardForm() {
   }
 
   const handleVendor = (selectedOption) => {
-    
     setVendor(selectedOption)
-  
   };
 
   function handeclick (event) {

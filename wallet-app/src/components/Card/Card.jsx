@@ -16,7 +16,7 @@ function Card({ cardNumber = '', cardName = '', valid = '', vendorImage = bitCoi
     : 'XXXX XXXX XXXX XXXX';
 
 
-
+  
   return (
 
 

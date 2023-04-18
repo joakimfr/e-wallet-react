@@ -13,18 +13,15 @@ function Home() {
  function handeclick () {
    navigate(`/cards`)
   }
-function handleCardClick (cardNumber) {
-  
-  console.log('hej')
-}
+
   return (
-    <div>
+    <div className='home'>
       <Header title='E-WALLET' text='ACTIVE CARD' />
       <article className="frame">
    
       </article>
       
-      <CardStack onCardClick={handleCardClick} />
+      <CardStack />
      
       <button className='button' onClick={handeclick}>add a new card</button>
     

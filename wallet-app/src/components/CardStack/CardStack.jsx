@@ -6,6 +6,8 @@ function CardStack() {
   
 const cards = useSelector((state) => { return state.cards });
 
+
+
 const cardsInStore = cards.map((item) => (
   
   <Card
@@ -15,9 +17,7 @@ const cardsInStore = cards.map((item) => (
     valid={item.valid} // Pass valid as a prop to Card component
     vendorImage={item.vendor} // Pass vendorImage as a prop to Card component
     vendorColor={item.color}
- 
-  
-   
+    
   />
  
 ));
@@ -25,8 +25,7 @@ console.log(cards)
 
   return (
     <div className='card-stacked'>
-      
-   {cardsInStore}
+      { cardsInStore }
     </div>
   )
 }
