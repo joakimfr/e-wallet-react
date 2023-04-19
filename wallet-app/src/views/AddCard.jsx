@@ -1,10 +1,11 @@
+import './AddCard.scss'
 import Header from "../components/Header/Header";
 import Card from "../components/Card/Card";
 import CardForm from "../components/CardForm/CardForm";
 
 function AddCard() {
   return (
-    <div>
+    <div className='add-card'>
       <Header title='ADD A NEW BANK CARD' text='NEW CARD' />
       <CardForm />
     </div>

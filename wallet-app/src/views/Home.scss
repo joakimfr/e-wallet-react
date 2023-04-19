@@ -1,18 +1,31 @@
 @import '../scss/_variables.scss';
 
 .home {
+
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 .8rem 0;
+ 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 1rem 0 1rem;
+  }
 
   &__frame {
     margin-top: 1rem;
-     border: 1px solid black;
-     border-radius: 8px;
-     display: flex;
+    display: flex;
      justify-content: center;
      align-items: center;
-     margin-bottom: 2rem;
+     height: 225px;
+   }
+
+   &__delete {
+    
    }
 
    &__button {

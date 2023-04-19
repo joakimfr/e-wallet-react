@@ -6,11 +6,17 @@ function addCard(item) {
 }
 
 function selectedCard(cardNumber) {
-  
   return {
   type: 'SELECTED_CARD',
   payload: cardNumber
   }
 }
 
-export { addCard, selectedCard }
+function deleteCard(cardNumber) {
+  return {
+    type: 'DELETE_CARD',
+    payload: cardNumber
+  }
+}
+
+export { addCard, selectedCard, deleteCard }

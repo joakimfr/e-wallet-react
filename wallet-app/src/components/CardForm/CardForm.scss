@@ -1,9 +1,19 @@
 @import '../../scss/_variables.scss';
 
+.cardform {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem 0 1rem;
+}
+
+
 .form {
   max-width: 380px;
   display: flex;
   flex-direction: column;
+  
   
 
   &__label {
@@ -17,10 +27,12 @@
     border-radius: 8px;
     font-family: $PTmono;
     border: 1px solid rgba(0, 0, 0, 0.8);
+   
   }
 
   &__dobule {
    display: flex;
+    
    
   } 
   
@@ -34,7 +46,7 @@
     font-size: 22px;
     border-radius: 8px;
     border: none;
-    margin-top: 48px;
+    
   }
 
 }
