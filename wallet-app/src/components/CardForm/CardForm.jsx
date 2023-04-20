@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch} from 'react-redux';
 import { useSelector } from 'react-redux';
 
-import { addCard, saveLocalStorage } from '../../actions/cardAction';
+import { addCard } from '../../actions/cardAction';
 import Select from 'react-select';
 
 import bitCoin from '../../assets/vendor-bitcoin.svg'
@@ -78,7 +78,7 @@ function CardForm() {
       color: vendor.color
     };
       dispatch(addCard(formData));
-      
+      //localStorage.setItem('cardData', JSON.stringify(formData)); // add form data to localStorage
       
      
 

@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import { selectedCard, deleteCard } from '../actions/cardAction';
+import { selectedCard, deleteCard, loadCardsLocalStorage } from '../actions/cardAction';
 
 
 //nästa steg är att kunna ta bort en produkt
@@ -31,6 +31,10 @@ function handleCardClick(cardNumber) {
 function handleDeleteClick (cardNumber) {
   dispatch(deleteCard(cardNumber))
 }
+
+useEffect (() => {
+  dispatch(loadCardsLocalStorage());
+}, []);
 
 return (
     <div className='home'>

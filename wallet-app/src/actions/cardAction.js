@@ -19,13 +19,15 @@ function deleteCard(cardNumber) {
   }
 }
 
-function saveLocalStorage(data) {
+function loadCardsLocalStorage() {
+  const cardsFromLocalStorage = JSON.parse(localStorage.getItem('cards') || '[]');
   return {
-    type: 'SAVE_LOCAL_STORAGE',
-    payload: {
-      cards: data
-    }
+    type: 'LOAD_CARDS_LOCAL_STORAGE',
+    payload: cardsFromLocalStorage
   }
 }
 
-export { addCard, selectedCard, deleteCard, saveLocalStorage }
+
+
+
+export { addCard, selectedCard, deleteCard, loadCardsLocalStorage }
