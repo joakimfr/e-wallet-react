@@ -18,7 +18,7 @@ function Home() {
 
   
 const selected = useSelector((state) => { return state.selectedCard})
-    console.log(selected)
+
 
  function handeClick () {
    navigate(`/cards`)
@@ -47,7 +47,10 @@ return (
               vendorColor={selected.color}
               
             />
-            <button className='home__delete' onClick={() => handleDeleteClick(selected.cardNumber)} >X</button>
+            <article className='home__delete-container'>
+            <button className='home__delete' onClick={() => handleDeleteClick(selected.cardNumber)}>X</button>
+            <p>Remove card from wallet</p>
+            </article>
             </div>
           )}
 

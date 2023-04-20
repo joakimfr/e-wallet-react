@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 function CardStack({ onCardClick }) {
   
 const cards = useSelector((state) => { return state.cards });
-console.log(cards)
+
 function handleCardClick(cardNumber) {
   onCardClick(cardNumber)
 }
@@ -24,7 +24,7 @@ const cardsInStore = cards.map((item) => (
   </div>
 
 ));
-console.log(cards)
+
 
   return (
     <div className='card-stacked'>

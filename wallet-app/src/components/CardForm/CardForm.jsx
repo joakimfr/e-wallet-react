@@ -2,9 +2,10 @@ import './CardForm.scss'
 import Card from '../Card/Card';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { useSelector } from 'react-redux';
-import { addCard } from '../../actions/cardAction';
+
+import { addCard, saveLocalStorage } from '../../actions/cardAction';
 import Select from 'react-select';
 
 import bitCoin from '../../assets/vendor-bitcoin.svg'
@@ -77,6 +78,10 @@ function CardForm() {
       color: vendor.color
     };
       dispatch(addCard(formData));
+      
+      
+     
+
       navigate(`/`)
     }
 

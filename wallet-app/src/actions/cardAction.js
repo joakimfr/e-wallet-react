@@ -19,4 +19,13 @@ function deleteCard(cardNumber) {
   }
 }
 
-export { addCard, selectedCard, deleteCard }
+function saveLocalStorage(data) {
+  return {
+    type: 'SAVE_LOCAL_STORAGE',
+    payload: {
+      cards: data
+    }
+  }
+}
+
+export { addCard, selectedCard, deleteCard, saveLocalStorage }

@@ -17,12 +17,19 @@
   z-index: 0;
 }
 
-.card-stacked > .card-stacked__card:not(:last-child):hover { 
+.card-stacked > .card-stacked__card:hover { 
   cursor: pointer;
   transform: translateY(-60%);
-  
   transition: .3s ease-out;
 }
+
+/*.card-stacked > .card-stacked__card:not(:last-child):hover { 
+  cursor: pointer;
+  transform: translateY(-60%);
+  transition: .3s ease-out;
+}
+*/
+
 
 
 

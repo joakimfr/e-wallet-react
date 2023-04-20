@@ -12,6 +12,7 @@ const reducer = (state = initialState, action) => {
           return {
               ...state,
               cards: [...state.cards, action.payload]
+
           };
       case 'SELECTED_CARD':
         const matchingCard = state.cards.find((card) => card.cardNumber === action.payload)
@@ -26,8 +27,15 @@ const reducer = (state = initialState, action) => {
           cards: newCards,
           selectedCard: state.selectedCard?.cardNumber === action.payload ? null : state.selectedCard
         }
+       // case 'SAVE_LOCAL_STORAGE':
+        //localStorage.setItem('cards', JSON.stringify(action.payload.cards));
+       // return {
+       //   ...state,
+       //   cards: action.payload.cards
+      //  };
       default:
           return state;
+      
 
   }
 }
