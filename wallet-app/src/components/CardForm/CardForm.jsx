@@ -4,10 +4,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch} from 'react-redux';
 import { useSelector } from 'react-redux';
-
-import { addCard, saveLocalStorage } from '../../actions/cardAction';
+import { addCard } from '../../actions/cardAction';
 import Select from 'react-select';
-
 import bitCoin from '../../assets/vendor-bitcoin.svg'
 import ninjaBank from '../../assets/vendor-ninja.svg'
 import blockChain from '../../assets/vendor-blockchain.svg'
@@ -17,10 +15,6 @@ function CardForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-
-
-  
-
   const [cardNumber, setCardNumber] = useState('');
   const [cardName, setCardName] = useState('');
   const [valid, setValid] = useState('');
@@ -28,7 +22,7 @@ function CardForm() {
   const [vendor, setVendor] = useState('');
 
   const cardNumbersInStore = useSelector((state) => { return state.cards });
-  const cardNumberExists = cardNumbersInStore.some(card => card.cardNumber === cardNumber)  // kollar om 
+  const cardNumberExists = cardNumbersInStore.some(card => card.cardNumber === cardNumber) 
   
  
   const handleCardNumber = (e) => {
@@ -48,8 +42,6 @@ function CardForm() {
     setValid(seperatedValue);
   };
 
-
-
   const handleVerification = (e) => {
     setVerification(e.target.value.replace(/\D/g,''));
   }
@@ -58,10 +50,10 @@ function CardForm() {
     setVendor(selectedOption)
   };
 
-//cardNumber.length !==16 || 
+
   function handleFormClick (event) {
     event.preventDefault();
-    if (!cardName || valid.length !==5 || verification.length !==3 || !vendor) {
+    if (cardNumber.length !==16 || !cardName || valid.length !==5 || verification.length !==3 || !vendor ) {
       alert('All fields need to be filled')
       return;
     }
@@ -78,10 +70,6 @@ function CardForm() {
       color: vendor.color
     };
       dispatch(addCard(formData));
-      
-      
-     
-
       navigate(`/`)
     }
 
@@ -106,9 +94,8 @@ function CardForm() {
     color: option.color
   }));
 
- 
-  
-  return(
+  return (
+
   <section className='cardform'>
     <Card cardNumber={cardNumber} cardName={cardName} valid={valid} vendorImage={vendor.image} vendorColor={vendor.color}  />
     <form className='form' action="">
