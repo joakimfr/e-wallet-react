@@ -5,8 +5,8 @@ import CardStack from "../components/CardStack/CardStack";
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from 'react';
-import { selectedCard, deleteCard, loadCardsLocalStorage } from '../actions/cardAction';
+import { useEffect } from 'react';
+import { selectedCard, deleteCard, loadCardsLocalStorage, loadActiveCard } from '../actions/cardAction';
 
 
 //nästa steg är att kunna ta bort en produkt
@@ -34,6 +34,7 @@ function handleDeleteClick (cardNumber) {
 
 useEffect (() => {
   dispatch(loadCardsLocalStorage());
+  dispatch(loadActiveCard());
 }, []);
 
 return (
@@ -49,21 +50,18 @@ return (
               valid={selected.valid}
               vendorImage={selected.vendor} 
               vendorColor={selected.color}
-              
             />
             <article className='home__delete-container'>
             <button className='home__delete' onClick={() => handleDeleteClick(selected.cardNumber)}>X</button>
             <p>Remove card from wallet</p>
-            </article>
-            </div>
-          )}
-
-        </article>
-        <CardStack onCardClick={handleCardClick} />
-        <button className='home__button' onClick={handeClick}>add a new card</button>
-        </section>
-      </div>
-    )
-  }
+          </article>
+        </div> 
+      )}
+    </article>
+      <CardStack onCardClick={handleCardClick} />
+      <button className='home__button' onClick={handeClick}>add a new card</button>
+    </section>
+  </div>
+)};
 
 export default Home;

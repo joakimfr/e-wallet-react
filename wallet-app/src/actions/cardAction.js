@@ -27,7 +27,15 @@ function loadCardsLocalStorage() {
   }
 }
 
+function loadActiveCard() {
+  const activeCard = JSON.parse(localStorage.getItem('selectedCard'))
+  return {
+    type: 'LOAD_ACTIVE_CARD',
+    payload: activeCard
+  }
+}
 
 
 
-export { addCard, selectedCard, deleteCard, loadCardsLocalStorage }
+
+export { addCard, selectedCard, deleteCard, loadCardsLocalStorage, loadActiveCard }

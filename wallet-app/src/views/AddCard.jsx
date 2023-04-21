@@ -14,8 +14,7 @@ function AddCard() {
     dispatch(loadCardsLocalStorage());
   }, []);
 
-
-  return (
+return (
     <div className='add-card'>
       <Header title='ADD A NEW BANK CARD' text='NEW CARD' />
       <CardForm />

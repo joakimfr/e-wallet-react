@@ -22,11 +22,10 @@ const cardsInStore = cards.map((item) => (
       vendorColor={item.color}
     />
   </div>
-
 ));
 
+return (
 
-  return (
     <div className='card-stacked'>
       { cardsInStore }
     </div>
