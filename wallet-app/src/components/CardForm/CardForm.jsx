@@ -58,7 +58,7 @@ function CardForm() {
       return;
     }
     if (cardNumberExists) {
-      alert('You already have a card with this card number')
+      alert('You already have a card with that card number')
       return
     }
       const formData = {
@@ -96,33 +96,33 @@ function CardForm() {
 
   return (
 
-  <section className='cardform'>
-    <Card cardNumber={cardNumber} cardName={cardName} valid={valid} vendorImage={vendor.image} vendorColor={vendor.color}  />
-    <form className='form' action="">
-      <label className='form__label' htmlFor="card number">card number</label>
-      <input className='form__input' type="text" maxLength={16} value={cardNumber} onChange={handleCardNumber} />
-      <label className='form__label' htmlFor="cardholder name">cardholder name</label>
-      <input className='form__input' type="text" value={cardName} onChange={handleCardName} />
-      <article className='form__dobule'>
-        <label className='form__label' htmlFor="">valid thru 
-          <input className='form__input' type="text" maxLength={5} value={valid} onChange={handleValid} />
-        </label>
-        <label className='form__label' htmlFor="ccv">ccv
-          <input className='form__input' type="text" maxLength={3} value={verification} onChange={handleVerification} />
-        </label>
-      </article>
-      <label className='form__label' htmlFor="vendor">vendor</label>
-      <Select 
-        classNamePrefix="select"
-        options={ optionVendors }
-        isSearchable={ false }
-        onChange={handleVendor}
-        placeholder=''
-      />
-    </form>
-    <button className='form__button' onClick={handleFormClick}>add card</button>
-  </section>
-  )
-}
+          <section className='cardform'>
+            <Card cardNumber={cardNumber} cardName={cardName} valid={valid} vendorImage={vendor.image} vendorColor={vendor.color}  />
+            <form className='form' action="">
+              <label className='form__label' htmlFor="card number">card number</label>
+              <input className='form__input' type="text" maxLength={16} value={cardNumber} onChange={handleCardNumber} />
+              <label className='form__label' htmlFor="cardholder name">cardholder name</label>
+              <input className='form__input' type="text" value={cardName} onChange={handleCardName} />
+              <article className='form__dobule'>
+                <label className='form__label' htmlFor="">valid thru 
+                  <input className='form__input' type="text" maxLength={5} value={valid} onChange={handleValid} />
+                </label>
+                <label className='form__label' htmlFor="ccv">ccv
+                  <input className='form__input' type="text" maxLength={3} value={verification} onChange={handleVerification} />
+                </label>
+              </article>
+              <label className='form__label' htmlFor="vendor">vendor</label>
+              <Select 
+                classNamePrefix="select"
+                options={ optionVendors }
+                isSearchable={ false }
+                onChange={handleVendor}
+                placeholder=''
+              />
+            </form>
+            <button className='form__button' onClick={handleFormClick}>add card</button>
+          </section>
+          )
+        }
 
 export default CardForm;

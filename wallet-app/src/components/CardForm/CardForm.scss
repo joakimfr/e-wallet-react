@@ -8,14 +8,11 @@
   padding: 1rem 0 1rem;
 }
 
-
 .form {
   max-width: 380px;
   display: flex;
   flex-direction: column;
   
-  
-
   &__label {
     font-family: $PTmono;
     font-size: 12px;
@@ -32,8 +29,6 @@
 
   &__dobule {
    display: flex;
-    
-   
   } 
   
   &__button {
@@ -46,9 +41,7 @@
     font-size: 22px;
     border-radius: 8px;
     border: none;
-    
   }
-
 }
 
 .option {

@@ -1,7 +1,7 @@
 import './Card.scss'
 import chipDark from '../../assets/chip-dark.svg'
 import bitCoin from '../../assets/vendor-bitcoin.svg'
-import chipLight from '../../assets/chip-light.svg'
+
 
 function Card({ cardNumber = '', cardName = '', valid = '', vendorImage = bitCoin, vendorColor,}) {
 
