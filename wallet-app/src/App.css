@@ -1,7 +1,14 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@600;700&family=Work+Sans:wght@400;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+.App {
+  display: flex;
+  justify-content: center;
+  
+}

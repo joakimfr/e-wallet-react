@@ -1,0 +1,50 @@
+@import '../../scss/_variables.scss';
+
+.card {
+  max-width: 380px;
+  max-height: 250px;
+  background: linear-gradient(248.3deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #D0D0D0;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 1rem .5rem 1rem;
+
+
+
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__vendor {
+    align-self: flex-start;
+  }
+
+  &__number {
+    text-align: center;
+    font-family: $PTmono;
+    font-weight: 400;
+    font-size: 29px;
+    letter-spacing: 0.03em;
+    margin: .8rem 0rem 1.7rem;
+  }
+
+  &__titles {
+    font-family: $PTmono;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  &__info {
+    font-family: $PTmono;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: .3rem;
+  }
+}
+
+/*@media (max-width: 390px) {
+  .card__number {
+    font-size: 24px;
+  }
+} */

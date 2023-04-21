@@ -1,0 +1,62 @@
+@import '../scss/_variables.scss';
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 .8rem 0;
+  min-height: 100vh;
+ 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0 1rem;
+    
+  }
+
+  &__frame {
+  
+    max-width: 363px;
+   } 
+
+   &__delete-container {
+    display: flex;
+    justify-content: center;
+    font-family: $PTmono;
+    font-size: 15px;
+    gap: .5rem;
+    margin-top: .5rem;
+    align-items: center;
+   }
+   &__delete {
+    height: 24px;
+    width: 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-family: $PTmono;
+    background-color: #000000;
+    color: #FFFFFF;
+    z-index: 1;
+   }
+
+   &__button {
+    padding: 1.2rem 0rem 1.2rem;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-family: $PTmono;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: 8px;
+    border: none;
+    
+   
+    cursor: pointer;
+  }
+}
+
+
+
+
