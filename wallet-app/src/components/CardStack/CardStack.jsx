@@ -22,6 +22,7 @@ const cardsInStore = cards.map((item) => (
       vendorColor={item.color}
     />
   </div>
+  
 ));
 
 return (

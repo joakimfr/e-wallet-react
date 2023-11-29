@@ -44,7 +44,7 @@ return (
         <article className="home__frame" >
           {selected && (
             <div>
-            <Card
+            <Card 
               cardNumber={selected.cardNumber}
               cardName={selected.cardName} 
               valid={selected.valid}
